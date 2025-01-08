@@ -31,6 +31,8 @@
             overflow-y: scroll;
             height: calc(100% - 80px);
             padding:0 25px;
+            display: flex;
+            flex-direction: column-reverse;
             .mess-sent{
                 display: flex;
                 align-items: flex-start;

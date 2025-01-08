@@ -1,3 +1,118 @@
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.addPayment {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    h3 {
+        color: #212121;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 24px 40px;
+        width: 100%;
+        max-width: 580px;
+
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #212121;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        select {
+            width: 100% !important;
+            height: 48px;
+            border: 1px solid #747474;
+            border-radius: 8px;
+            outline: none;
+            padding: 0 8px 0 16px;
+        }
+
+        .btnss {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        button {
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 1px solid #1AC5BD;
+            outline: none;
+            cursor: pointer;
+            width: fit-content;
+            min-width: 131px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1AC5BD;
+        }
+
+        .btn-save {
+            background-color: #1AC5BD;
+            border: 1px solid #1AC5BD;
+            color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                color: #1AC5BD;
+            }
+        }
+
+        .btn-cancel {
+            background-color: rgba(229, 70, 64, 0.2);
+            color: rgba(229, 70, 64, 1);
+            border: 1px solid rgba(229, 70, 64, 1);
+
+            &:hover {
+                background-color: rgba(229, 70, 64, 1);
+                color: #fff;
+            }
+        }
+    }
+
+}
+
 .page-wrapper {
     display: flex;
     align-items: flex-start;
@@ -5,7 +120,8 @@
     @media screen and (max-width: 767px) {
         flex-direction: column;
     }
-    span{
+
+    span {
         text-wrap: nowrap;
     }
 
@@ -669,6 +785,10 @@
         color: #025AB4;
     }
 
+    .fa-plus {
+        color: #025AB4;
+    }
+
     .fa-trash-can {
         color: #BF1A14;
     }
@@ -747,7 +867,8 @@
                     text-overflow: ellipsis;
 
                 }
-                .pagdge-nonPay{
+
+                .pagdge-nonPay {
                     padding: 8px 10px;
                     border-radius: 9px;
                     background-color: #CCDEF0;
@@ -755,7 +876,7 @@
                     width: fit-content;
                 }
 
-                .pagdge-pay{
+                .pagdge-pay {
                     padding: 8px 10px;
                     border-radius: 9px;
                     background-color: rgba(0, 180, 138, 0.1);
@@ -782,10 +903,12 @@
             .finance-body3 {
                 grid-template-columns: repeat(8, 1fr);
             }
-            .finance-body4{
+
+            .finance-body4 {
                 grid-template-columns: repeat(4, 1fr);
             }
-            .finance-body5{
+
+            .finance-body5 {
                 grid-template-columns: repeat(5, 1fr);
             }
 

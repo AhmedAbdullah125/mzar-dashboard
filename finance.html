@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/sal.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
     integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,7 +32,52 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#fixedNavbar">
+  <div class="addPayment">
+    <div class="overlay" onclick="closeAddPayment()"></div>
+    <form action="">
+      <h3>اضافه دفعة</h3>
+      <div class="form-group">
+        <label for="amount">المبلغ</label>
+        <input type="number" name="amount" id="amount" placeholder="ادخل المبلغ">
+      </div>
+      <div class="form-group">
+        <label for="method">طريقه الدفع </label>
+        <select id="method" name="method" style="width: 300px;">
+          <option value="1">كاش</option>
+          <option value="2">قسط</option>
+          <option value="3">تحويل</option>
+          <option value="4">اخرى</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="method">الكاش مع </label>
+        <select id="method" name="method" style="width: 300px;">
+          <option value="1">الموظف</option>
+          <option value="2">العميل</option>
+          <option value="3">السائق</option>
+          <option value="4">اخرى</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="method">اسم الموظف</label>
+        <select id="method" name="method" style="width: 300px;">
+          <option value="1">محمد علي</option>
+          <option value="2">محمد علي</option>
+          <option value="3">ايمن</option>
+          <option value="4">اخرى</option>
+        </select>
+      </div>
 
+
+      <div class="btnss">
+        <button class="btn-main btn-save">حفظ</button>
+        <button class="btn-main btn-cancel">الغاء</button>
+      </div>
+
+    </form>
+  </div>
+  </form>
+  </div>
   <div class="page-wrapper">
     <div class="empty-side"></div>
     <div class="page-content">
@@ -78,12 +124,12 @@
       </div>
 
       <div class="links">
-        <a href="index.html" class="active">البيانات </a>
-        <a href="finance.html">الماليه </a>
+        <a href="index.html">البيانات </a>
+        <a href="finance.html" class="active">الماليه </a>
         <a href="chat.html">المحادثات </a>
         <a href="index.html">سجل الاحداث</a>
       </div>
-      
+
       <div class="finance-cont">
         <div class="finance-group-cont">
           <div class="heading">
@@ -114,7 +160,7 @@
           <div class="heading">
             <i class="fa-solid fa-bullseye"></i>
             <h3>الدفعات</h3>
-            <i class="fa-solid fa-pencil"></i>
+            <i class="fa-solid fa-plus" onclick="addPayment()"></i>
           </div>
           <div class="grid-cont">
             <div class="finance-body finance-body2">
@@ -246,17 +292,19 @@
               <span class="grid-body">100.00 ريال</span>
               <span class="grid-body">عموله</span>
               <span class="grid-body">عموله الرحله</span>
-              <span class="grid-body has-ies"><i class="fa-solid fa-pencil"></i><i  class="fa-regular fa-trash-can"></i></span>
+              <span class="grid-body has-ies"><i class="fa-solid fa-pencil"></i><i
+                  class="fa-regular fa-trash-can"></i></span>
               <span class="grid-body">100.00 ريال</span>
               <span class="grid-body">عموله</span>
               <span class="grid-body">عموله الرحله</span>
-              <span class="grid-body has-ies"><i class="fa-solid fa-pencil"></i><i  class="fa-regular fa-trash-can"></i></span>
+              <span class="grid-body has-ies"><i class="fa-solid fa-pencil"></i><i
+                  class="fa-regular fa-trash-can"></i></span>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 
 
@@ -268,30 +316,32 @@
 
 
 
-  <!--fixed-whats-->
-  <!-- <a href="https://wa.me/+201013633154?text=Good%20Morning%20Isnaad" class="fixed-what">
+    <!--fixed-whats-->
+    <!-- <a href="https://wa.me/+201013633154?text=Good%20Morning%20Isnaad" class="fixed-what">
     <i class="fa-brands fa-whatsapp"></i>
   </a> -->
-  <!--fixed-whats-->
-  <!-- arrow to top -->
-  <!-- <a class="arrow-top">
+    <!--fixed-whats-->
+    <!-- arrow to top -->
+    <!-- <a class="arrow-top">
     <i class="fa-regular fa-arrow-up-long"></i>
   </a> -->
-  <!-- arrow to top -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/mixitup.min.js"></script>
-  <script src="js/lazyload.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
-    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/sal.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <!-- arrow to top -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/sal.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
 
 </body>
 
