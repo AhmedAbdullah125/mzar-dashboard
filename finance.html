@@ -71,7 +71,53 @@
 
       <div class="btnss">
         <button class="btn-main btn-save">حفظ</button>
-        <button class="btn-main btn-cancel">الغاء</button>
+        <button class="btn-main btn-cancel" onclick="closeAddPayment()">الغاء</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="addPaymentLink">
+    <div class="overlay" onclick="closeAddPaymentLink()"></div>
+    <form action="">
+      <h3>إنشاء رابط دفع</h3>
+      <div class="form-group">
+        <label for="amount">المبلغ</label>
+        <input type="number" name="amount" id="amount" placeholder="ادخل المبلغ">
+      </div>
+      <div class="form-group">
+        <label for="amount">ملاحظات</label>
+        <input type="number" name="amount" id="amount" placeholder="ادخل ملاحظات">
+      </div>
+      <div class="form-group services">
+        <div class="check-all">
+          <input type="checkbox" onchange="checkAll(this)" id="checkAll" id="checkAll" name="service1">
+          <label for="checkAll">الخدمات الغير مدفوعة</label>
+        </div>
+        <div>
+          <input type="checkbox" id="service1" name="service1">
+          <label for="service1">تذاكر المشاعر (300 رس)</label>
+        </div>
+        <div>
+          <input type="checkbox" id="service2" name="service2">
+          <label for="service2">خدمة الصعود للغار حراء</label>
+        </div>
+        <div>
+          <input type="checkbox"  name="service3" id="serviceother">
+          <label for="service3" >أخرى</label>
+        </div>
+        <div class="other-payments hide" id="other-payments">
+          <input type="text" id="other-payments" name="service4" placeholder="ادخل اسم الخدمة">
+          <input type="text" id="other-note" name="service4" placeholder="ادخل ملاحظات">
+        </div>
+      </div>
+      <div class="total">
+        <h4>اجمالي المبلغ : <span>200.2 ريال</span></h4>
+      </div>
+
+
+      <div class="btnss">
+        <button class="btn-main btn-save">حفظ</button>
+        <button class="btn-main btn-cancel" onchange="closeAddPaymentLink()">الغاء</button>
       </div>
 
     </form>
@@ -208,7 +254,7 @@
           <div class="heading">
             <i class="fa-regular fa-credit-card"></i>
             <h3>روابط الدفع</h3>
-            <i class="fa-solid fa-pencil"></i>
+            <i class="fa-solid fa-plus" onclick="addPaymentLink()"></i>
           </div>
           <div class="grid-cont">
             <div class="finance-body finance-body5">

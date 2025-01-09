@@ -3,7 +3,8 @@ body {
     position: relative;
 }
 
-.addPayment {
+.addPayment,
+.addPaymentLink {
     display: none;
     height: 100vh;
     width: 100%;
@@ -41,6 +42,10 @@ body {
         padding: 24px 40px;
         width: 100%;
         max-width: 580px;
+
+        @media screen and (max-width: 767px) {
+            padding: 16px;
+        }
 
         label {
             font-size: 16px;
@@ -107,6 +112,66 @@ body {
             &:hover {
                 background-color: rgba(229, 70, 64, 1);
                 color: #fff;
+            }
+        }
+
+        .services {
+            div {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-bottom: 16px;
+
+                input[type="checkbox"] {
+                    width: 16px !important;
+                    height: 16px !important;
+                    border: 1px solid #025AB4;
+                    border-radius: 8px;
+
+                }
+
+                input[type="checkbox"]:checked {
+                    background-color: rgba(2, 90, 180, 1);
+
+                }
+
+                label {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #494949;
+                    margin-bottom: 0;
+                }
+            }
+
+            .check-all {
+                display: flex;
+
+                label {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #212121;
+                    margin-bottom: 0;
+                }
+            }
+            .other-payments{
+                display: none;
+                flex-direction: column;
+                gap: 16px;
+                
+            }
+        }
+        .total{
+            border-top: 1px solid #DFDFDF;
+            padding: 18px 0;
+            h4{
+                color: #353535;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 0;
+                span{
+                    font-size: 20px;
+                    font-weight: 700;
+                }
             }
         }
     }

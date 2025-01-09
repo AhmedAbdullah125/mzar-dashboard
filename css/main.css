@@ -366,7 +366,8 @@ body {
   position: relative;
 }
 
-.addPayment {
+.addPayment,
+.addPaymentLink {
   display: none;
   height: 100vh;
   width: 100%;
@@ -377,7 +378,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-.addPayment .overlay {
+.addPayment .overlay,
+.addPaymentLink .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -386,13 +388,15 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
-.addPayment h3 {
+.addPayment h3,
+.addPaymentLink h3 {
   color: #212121;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 0;
 }
-.addPayment form {
+.addPayment form,
+.addPaymentLink form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -403,18 +407,28 @@ body {
   width: 100%;
   max-width: 580px;
 }
-.addPayment form label {
+@media screen and (max-width: 767px) {
+  .addPayment form,
+  .addPaymentLink form {
+    padding: 16px;
+  }
+}
+.addPayment form label,
+.addPaymentLink form label {
   font-size: 16px;
   font-weight: 600;
   color: #212121;
   margin-bottom: 16px;
 }
-.addPayment form .form-group {
+.addPayment form .form-group,
+.addPaymentLink form .form-group {
   display: flex;
   flex-direction: column;
 }
 .addPayment form input,
-.addPayment form select {
+.addPayment form select,
+.addPaymentLink form input,
+.addPaymentLink form select {
   width: 100% !important;
   height: 48px;
   border: 1px solid #747474;
@@ -422,12 +436,14 @@ body {
   outline: none;
   padding: 0 8px 0 16px;
 }
-.addPayment form .btnss {
+.addPayment form .btnss,
+.addPaymentLink form .btnss {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.addPayment form button {
+.addPayment form button,
+.addPaymentLink form button {
   color: #fff;
   padding: 12px 35px;
   border-radius: 8px;
@@ -445,23 +461,86 @@ body {
   justify-content: center;
   background-color: #1AC5BD;
 }
-.addPayment form .btn-save {
+.addPayment form .btn-save,
+.addPaymentLink form .btn-save {
   background-color: #1AC5BD;
   border: 1px solid #1AC5BD;
   color: #fff;
 }
-.addPayment form .btn-save:hover {
+.addPayment form .btn-save:hover,
+.addPaymentLink form .btn-save:hover {
   background-color: #fff;
   color: #1AC5BD;
 }
-.addPayment form .btn-cancel {
+.addPayment form .btn-cancel,
+.addPaymentLink form .btn-cancel {
   background-color: rgba(229, 70, 64, 0.2);
   color: rgb(229, 70, 64);
   border: 1px solid rgb(229, 70, 64);
 }
-.addPayment form .btn-cancel:hover {
+.addPayment form .btn-cancel:hover,
+.addPaymentLink form .btn-cancel:hover {
   background-color: rgb(229, 70, 64);
   color: #fff;
+}
+.addPayment form .services div,
+.addPaymentLink form .services div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+.addPayment form .services div input[type=checkbox],
+.addPaymentLink form .services div input[type=checkbox] {
+  width: 16px !important;
+  height: 16px !important;
+  border: 1px solid #025AB4;
+  border-radius: 8px;
+}
+.addPayment form .services div input[type=checkbox]:checked,
+.addPaymentLink form .services div input[type=checkbox]:checked {
+  background-color: rgb(2, 90, 180);
+}
+.addPayment form .services div label,
+.addPaymentLink form .services div label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #494949;
+  margin-bottom: 0;
+}
+.addPayment form .services .check-all,
+.addPaymentLink form .services .check-all {
+  display: flex;
+}
+.addPayment form .services .check-all label,
+.addPaymentLink form .services .check-all label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 0;
+}
+.addPayment form .services .other-payments,
+.addPaymentLink form .services .other-payments {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+.addPayment form .total,
+.addPaymentLink form .total {
+  border-top: 1px solid #DFDFDF;
+  padding: 18px 0;
+}
+.addPayment form .total h4,
+.addPaymentLink form .total h4 {
+  color: #353535;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.addPayment form .total h4 span,
+.addPaymentLink form .total h4 span {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .page-wrapper {
